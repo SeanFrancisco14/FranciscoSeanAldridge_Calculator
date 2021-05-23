@@ -13,20 +13,10 @@ namespace Calculator
     public partial class Form1 : Form
     {
         Double result_Value = 0;
-        string operator = 
+        string calcu_Operation = "";
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,21 +34,6 @@ namespace Calculator
 
         }
 
-        private void num5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void num8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void positiveOrnegative_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button_Click(object sender, EventArgs e)
         {
             if (textBox_Answer.Text == "0")
@@ -71,8 +46,19 @@ namespace Calculator
         private void operator_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            operator = button.Text;
+            calcu_Operation = button.Text;
             result_Value = Double.Parse(textBox_Answer.Text); 
+        }
+
+        private void CEbtn_Click(object sender, EventArgs e)
+        {
+            textBox_Answer.Text = "0";
+        }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            textBox_Answer.Text = "0";
+            result_Value = 0;
         }
     }
 }

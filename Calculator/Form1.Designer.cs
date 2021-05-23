@@ -173,7 +173,7 @@ namespace Calculator
             this.CE_Button.TabIndex = 11;
             this.CE_Button.Text = "CE";
             this.CE_Button.UseVisualStyleBackColor = true;
-            this.CE_Button.Click += new System.EventHandler(this.positiveOrnegative_Click);
+            this.CE_Button.Click += new System.EventHandler(this.CEbtn_Click);
             // 
             // clearButton
             // 
@@ -185,6 +185,7 @@ namespace Calculator
             this.clearButton.TabIndex = 12;
             this.clearButton.Text = "C";
             this.clearButton.UseVisualStyleBackColor = false;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
             // multiplicationSign
             // 
