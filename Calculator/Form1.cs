@@ -14,6 +14,8 @@ namespace Calculator
     {
         Double result_Value = 0;
         string calcu_Operation = "";
+        bool isOperation_Performed = false;
+
         public Form1()
         {
             InitializeComponent();
@@ -31,23 +33,51 @@ namespace Calculator
 
         private void equalsSign_Click(object sender, EventArgs e)
         {
+            switch(calcu_Operation)
+            {
+                case "+":
+                    textBox_Answer.Text = (result_Value + Double.Parse(textBox_Answer.Text)).ToString();
+                    break;
 
+                case "-":
+                    textBox_Answer.Text = (result_Value - Double.Parse(textBox_Answer.Text)).ToString();
+                    break;
+
+                case "*":
+                    textBox_Answer.Text = (result_Value * Double.Parse(textBox_Answer.Text)).ToString();
+                    break;
+
+                case "/":
+                    textBox_Answer.Text = (result_Value / Double.Parse(textBox_Answer.Text)).ToString();
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void button_Click(object sender, EventArgs e)
         {
-            if (textBox_Answer.Text == "0")
+            if ((textBox_Answer.Text == "0") || isOperation_Performed)
                 textBox_Answer.Clear();
 
+           isOperation_Performed = false;
            Button button = (Button)sender;
-            textBox_Answer.Text = textBox_Answer.Text + button.Text;
+            if (button.Text == ".")
+            {
+                if (!textBox_Answer.Text.Contains("."))
+                    textBox_Answer.Text = textBox_Answer.Text + button.Text;
+            }else
+
+           textBox_Answer.Text = textBox_Answer.Text + button.Text;
         }
 
         private void operator_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             calcu_Operation = button.Text;
-            result_Value = Double.Parse(textBox_Answer.Text); 
+            result_Value = Double.Parse(textBox_Answer.Text);
+            currentOperation_Label.Text = result_Value + "" + calcu_Operation;
+            isOperation_Performed = true; 
         }
 
         private void CEbtn_Click(object sender, EventArgs e)

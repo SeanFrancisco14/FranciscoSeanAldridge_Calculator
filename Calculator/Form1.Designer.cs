@@ -49,7 +49,7 @@ namespace Calculator
             this.equalsSign = new System.Windows.Forms.Button();
             this.plusSign = new System.Windows.Forms.Button();
             this.textBox_Answer = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.currentOperation_Label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // num7
@@ -193,7 +193,7 @@ namespace Calculator
             this.multiplicationSign.Name = "multiplicationSign";
             this.multiplicationSign.Size = new System.Drawing.Size(59, 50);
             this.multiplicationSign.TabIndex = 13;
-            this.multiplicationSign.Text = "X";
+            this.multiplicationSign.Text = "*";
             this.multiplicationSign.UseVisualStyleBackColor = true;
             this.multiplicationSign.Click += new System.EventHandler(this.operator_Click);
             // 
@@ -204,7 +204,7 @@ namespace Calculator
             this.divisionSign.Name = "divisionSign";
             this.divisionSign.Size = new System.Drawing.Size(59, 50);
             this.divisionSign.TabIndex = 14;
-            this.divisionSign.Text = "÷";
+            this.divisionSign.Text = "/";
             this.divisionSign.UseVisualStyleBackColor = true;
             this.divisionSign.Click += new System.EventHandler(this.operator_Click);
             // 
@@ -250,16 +250,16 @@ namespace Calculator
             this.textBox_Answer.Text = "0";
             this.textBox_Answer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label1
+            // currentOperation_Label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 24);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "label1";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.currentOperation_Label.AutoSize = true;
+            this.currentOperation_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentOperation_Label.ForeColor = System.Drawing.Color.Aqua;
+            this.currentOperation_Label.Location = new System.Drawing.Point(12, 9);
+            this.currentOperation_Label.Name = "currentOperation_Label";
+            this.currentOperation_Label.Size = new System.Drawing.Size(0, 24);
+            this.currentOperation_Label.TabIndex = 19;
+            this.currentOperation_Label.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -267,7 +267,7 @@ namespace Calculator
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(338, 305);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.currentOperation_Label);
             this.Controls.Add(this.textBox_Answer);
             this.Controls.Add(this.plusSign);
             this.Controls.Add(this.equalsSign);
@@ -319,7 +319,7 @@ namespace Calculator
         private System.Windows.Forms.Button equalsSign;
         private System.Windows.Forms.Button plusSign;
         private System.Windows.Forms.TextBox textBox_Answer;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label currentOperation_Label;
     }
 }
 
