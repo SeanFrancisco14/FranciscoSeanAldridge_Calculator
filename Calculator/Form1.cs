@@ -53,6 +53,8 @@ namespace Calculator
                 default:
                     break;
             }
+            result_Value = Double.Parse(textBox_Answer.Text);
+            currentOperation_Label.Text = "";
         }
 
         private void button_Click(object sender, EventArgs e)
@@ -74,10 +76,23 @@ namespace Calculator
         private void operator_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
-            calcu_Operation = button.Text;
-            result_Value = Double.Parse(textBox_Answer.Text);
-            currentOperation_Label.Text = result_Value + "" + calcu_Operation;
-            isOperation_Performed = true; 
+
+            if (result_Value != 0)
+            {
+                equalsSign.PerformClick();
+                calcu_Operation = button.Text;
+                result_Value = Double.Parse(textBox_Answer.Text);
+                currentOperation_Label.Text = result_Value + "" + calcu_Operation;
+                isOperation_Performed = true;
+            }
+
+            else
+            {
+                calcu_Operation = button.Text;
+                result_Value = Double.Parse(textBox_Answer.Text);
+                currentOperation_Label.Text = result_Value + "" + calcu_Operation;
+                isOperation_Performed = true;
+            }
         }
 
         private void CEbtn_Click(object sender, EventArgs e)
