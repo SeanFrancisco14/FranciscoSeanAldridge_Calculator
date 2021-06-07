@@ -83,11 +83,13 @@ namespace Calculator
         private void CEbtn_Click(object sender, EventArgs e)
         {
             textBox_Answer.Text = "0";
+            currentOperation_Label.Text = "";
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
             textBox_Answer.Text = "0";
+            currentOperation_Label.Text = "";
             result_Value = 0;
         }
     }
