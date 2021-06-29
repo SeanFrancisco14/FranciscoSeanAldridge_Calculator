@@ -85,7 +85,6 @@ namespace Calculator
                 currentOperation_Label.Text = result_Value + "" + calcu_Operation;
                 isOperation_Performed = true;
             }
-
             else
             {
                 calcu_Operation = button.Text;
@@ -106,6 +105,11 @@ namespace Calculator
             textBox_Answer.Text = "0";
             currentOperation_Label.Text = "";
             result_Value = 0;
+        }
+
+        private void textBox_Answer_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
