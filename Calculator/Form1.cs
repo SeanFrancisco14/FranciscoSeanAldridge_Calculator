@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Calculator
@@ -14,7 +7,7 @@ namespace Calculator
     {
         Double result_Value = 0;
         string calcu_Operation = "";
-        bool isOperation_Performed = false;
+        bool isOperationPerformed = false, isInfinityException = false;
 
         public Form1()
         {
@@ -59,10 +52,10 @@ namespace Calculator
 
         private void button_Click(object sender, EventArgs e)
         {
-            if ((textBox_Answer.Text == "0") || isOperation_Performed)
+            if ((textBox_Answer.Text == "0") || isOperationPerformed)
                 textBox_Answer.Clear();
 
-           isOperation_Performed = false;
+           isOperationPerformed = false;
            Button button = (Button)sender;
             if (button.Text == ".")
             {
@@ -83,14 +76,14 @@ namespace Calculator
                 calcu_Operation = button.Text;
                 result_Value = Double.Parse(textBox_Answer.Text);
                 currentOperation_Label.Text = result_Value + "" + calcu_Operation;
-                isOperation_Performed = true;
+                isOperationPerformed = true;
             }
             else
             {
                 calcu_Operation = button.Text;
                 result_Value = Double.Parse(textBox_Answer.Text);
                 currentOperation_Label.Text = result_Value + "" + calcu_Operation;
-                isOperation_Performed = true;
+                isOperationPerformed = true;
             }
         }
 
@@ -98,6 +91,7 @@ namespace Calculator
         {
             textBox_Answer.Text = "0";
             currentOperation_Label.Text = "";
+            result_Value = 0;
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -110,6 +104,14 @@ namespace Calculator
         private void textBox_Answer_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSign_Click(object sender, EventArgs e)
+        {
+            if (!isInfinityException)
+            {
+                textBox_Answer.Text = (double.Parse(textBox_Answer.Text) * -1).ToString();
+            }
         }
     }
 }

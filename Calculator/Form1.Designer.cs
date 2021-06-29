@@ -40,7 +40,7 @@ namespace Calculator
             this.btnTwo = new System.Windows.Forms.Button();
             this.btnThree = new System.Windows.Forms.Button();
             this.btnZero = new System.Windows.Forms.Button();
-            this.btnPeriod = new System.Windows.Forms.Button();
+            this.btnDecimalPoint = new System.Windows.Forms.Button();
             this.btnCE = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnMultiply = new System.Windows.Forms.Button();
@@ -153,17 +153,17 @@ namespace Calculator
             this.btnZero.UseVisualStyleBackColor = true;
             this.btnZero.Click += new System.EventHandler(this.button_Click);
             // 
-            // btnPeriod
+            // btnDecimalPoint
             // 
-            this.btnPeriod.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPeriod.Location = new System.Drawing.Point(134, 233);
-            this.btnPeriod.Name = "btnPeriod";
-            this.btnPeriod.Size = new System.Drawing.Size(55, 55);
-            this.btnPeriod.TabIndex = 10;
-            this.btnPeriod.Text = ".";
-            this.btnPeriod.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPeriod.UseVisualStyleBackColor = true;
-            this.btnPeriod.Click += new System.EventHandler(this.button_Click);
+            this.btnDecimalPoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDecimalPoint.Location = new System.Drawing.Point(134, 233);
+            this.btnDecimalPoint.Name = "btnDecimalPoint";
+            this.btnDecimalPoint.Size = new System.Drawing.Size(55, 55);
+            this.btnDecimalPoint.TabIndex = 10;
+            this.btnDecimalPoint.Text = ".";
+            this.btnDecimalPoint.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDecimalPoint.UseVisualStyleBackColor = true;
+            this.btnDecimalPoint.Click += new System.EventHandler(this.button_Click);
             // 
             // btnCE
             // 
@@ -272,6 +272,7 @@ namespace Calculator
             this.btnSign.TabIndex = 20;
             this.btnSign.Text = "+/-";
             this.btnSign.UseVisualStyleBackColor = true;
+            this.btnSign.Click += new System.EventHandler(this.btnSign_Click);
             // 
             // Form1
             // 
@@ -289,7 +290,7 @@ namespace Calculator
             this.Controls.Add(this.btnMultiply);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnCE);
-            this.Controls.Add(this.btnPeriod);
+            this.Controls.Add(this.btnDecimalPoint);
             this.Controls.Add(this.btnZero);
             this.Controls.Add(this.btnThree);
             this.Controls.Add(this.btnTwo);
@@ -323,7 +324,7 @@ namespace Calculator
         private System.Windows.Forms.Button btnTwo;
         private System.Windows.Forms.Button btnThree;
         private System.Windows.Forms.Button btnZero;
-        private System.Windows.Forms.Button btnPeriod;
+        private System.Windows.Forms.Button btnDecimalPoint;
         private System.Windows.Forms.Button btnCE;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnMultiply;
