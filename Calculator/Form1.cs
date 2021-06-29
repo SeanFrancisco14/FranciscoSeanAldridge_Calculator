@@ -79,7 +79,7 @@ namespace Calculator
 
             if (result_Value != 0)
             {
-                equalsSign.PerformClick();
+                btnEquals.PerformClick();
                 calcu_Operation = button.Text;
                 result_Value = Double.Parse(textBox_Answer.Text);
                 currentOperation_Label.Text = result_Value + "" + calcu_Operation;
