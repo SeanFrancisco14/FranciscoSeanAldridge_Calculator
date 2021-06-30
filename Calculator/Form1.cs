@@ -24,6 +24,10 @@ namespace Calculator
 
         }
 
+        private void textBox_Answer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         private void equalsSign_Click(object sender, EventArgs e)
         {
             switch(calcu_Operation)
@@ -99,11 +103,6 @@ namespace Calculator
             textBox_Answer.Text = "0";
             currentOperation_Label.Text = "";
             result_Value = 0;
-        }
-
-        private void textBox_Answer_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSign_Click(object sender, EventArgs e)
