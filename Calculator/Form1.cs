@@ -98,7 +98,7 @@ namespace Calculator
             result_Value = 0;
         }
 
-        private void clearButton_Click(object sender, EventArgs e)
+        private void ClearButton_Click(object sender, EventArgs e)
         {
             textBox_Answer.Text = "0";
             currentOperation_Label.Text = "";

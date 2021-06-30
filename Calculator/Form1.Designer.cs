@@ -186,7 +186,7 @@ namespace Calculator
             this.btnClear.TabIndex = 12;
             this.btnClear.Text = "C";
             this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.clearButton_Click);
+            this.btnClear.Click += new System.EventHandler(this.ClearButton_Click);
             // 
             // btnMultiply
             // 
