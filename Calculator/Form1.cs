@@ -17,7 +17,7 @@ namespace Calculator
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -29,15 +29,12 @@ namespace Calculator
                 case "+":
                     textBox_Answer.Text = (calc.Result_Value + Double.Parse(textBox_Answer.Text)).ToString();
                     break;
-
                 case "-":
                     textBox_Answer.Text = (calc.Result_Value - Double.Parse(textBox_Answer.Text)).ToString();
                     break;
-
                 case "*":
                     textBox_Answer.Text = (calc.Result_Value * Double.Parse(textBox_Answer.Text)).ToString();
                     break;
-
                 case "/":
                     textBox_Answer.Text = (calc.Result_Value / Double.Parse(textBox_Answer.Text)).ToString();
                     break;

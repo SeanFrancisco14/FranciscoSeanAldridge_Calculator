@@ -248,7 +248,6 @@ namespace Calculator
             this.textBox_Answer.Name = "textBox_Answer";
             this.textBox_Answer.Size = new System.Drawing.Size(299, 20);
             this.textBox_Answer.TabIndex = 18;
-            this.textBox_Answer.Text = "0";
             this.textBox_Answer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox_Answer.TextChanged += new System.EventHandler(this.textBox_Answer_TextChanged);
             // 
@@ -261,7 +260,7 @@ namespace Calculator
             this.currentOperation_Label.Name = "currentOperation_Label";
             this.currentOperation_Label.Size = new System.Drawing.Size(0, 24);
             this.currentOperation_Label.TabIndex = 19;
-            this.currentOperation_Label.Click += new System.EventHandler(this.label1_Click);
+            this.currentOperation_Label.Click += new System.EventHandler(this.Label1_Click);
             // 
             // btnSign
             // 
@@ -332,9 +331,9 @@ namespace Calculator
         private System.Windows.Forms.Button btnMinus;
         private System.Windows.Forms.Button btnEquals;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox textBox_Answer;
-        private System.Windows.Forms.Label currentOperation_Label;
         private System.Windows.Forms.Button btnSign;
+        public System.Windows.Forms.TextBox textBox_Answer;
+        public System.Windows.Forms.Label currentOperation_Label;
     }
 }
 
