@@ -8,7 +8,6 @@ namespace Calculator
 {
     class calculatorClass
     {
-        Form1 form1 = new Form1();
         private Double result_Value = 0;
         private string calcu_Operation = "";
         private bool isOperationPerformed = false;
@@ -19,12 +18,5 @@ namespace Calculator
         public bool IsOperationPerformed { get => isOperationPerformed; set => isOperationPerformed = value; }
         public bool IsInfinityException { get => isInfinityException; set => isInfinityException = value; }
         public Form1 Form1 { get => form1; set => form1 = value; }
-
-        public void Clear()
-        {
-            Form1.textBox_Answer.Text = "0";
-            Form1.currentOperation_Label.Text = "";
-            result_Value = 0;
-        }
     }
 }

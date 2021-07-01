@@ -87,19 +87,18 @@ namespace Calculator
             }
         }
 
-        private void CEbtn_Click(object sender, EventArgs e)
-        {
-            textBox_Answer.Text = "0";
-            currentOperation_Label.Text = "";
-            calc.Result_Value = 0;
-        }
-
         private void btnSign_Click(object sender, EventArgs e)
         {
             if (!calc.IsInfinityException)
             {
                 textBox_Answer.Text = (double.Parse(textBox_Answer.Text) * -1).ToString();
             }
+        }
+        private void CEbtn_Click(object sender, EventArgs e)
+        {
+            textBox_Answer.Text = "0";
+            currentOperation_Label.Text = "";
+            calc.Result_Value = 0;
         }
 
         private void clearButton_Click(object sender, EventArgs e)
