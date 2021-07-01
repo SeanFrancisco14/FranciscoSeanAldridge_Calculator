@@ -248,6 +248,7 @@ namespace Calculator
             this.textBox_Answer.Name = "textBox_Answer";
             this.textBox_Answer.Size = new System.Drawing.Size(299, 20);
             this.textBox_Answer.TabIndex = 18;
+            this.textBox_Answer.Text = "0";
             this.textBox_Answer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox_Answer.TextChanged += new System.EventHandler(this.textBox_Answer_TextChanged);
             // 

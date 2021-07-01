@@ -17,7 +17,12 @@ namespace Calculator
 
         }
 
-        private void Label1_Click(object sender, EventArgs e)
+        public void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void textBox_Answer_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -89,18 +94,6 @@ namespace Calculator
             calc.Result_Value = 0;
         }
 
-        private void clearButton_Click(object sender, EventArgs e)
-        {
-            textBox_Answer.Text = "0";
-            currentOperation_Label.Text = "";
-            calc.Result_Value = 0;
-        }
-
-        private void textBox_Answer_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSign_Click(object sender, EventArgs e)
         {
             if (!calc.IsInfinityException)
@@ -108,5 +101,12 @@ namespace Calculator
                 textBox_Answer.Text = (double.Parse(textBox_Answer.Text) * -1).ToString();
             }
         }
+
+        private void clearButton_Click(object sender, EventArgs e)
+        {
+            textBox_Answer.Text = "0";
+            currentOperation_Label.Text = "";
+            calc.Result_Value = 0;
+        }  
     }
 }
