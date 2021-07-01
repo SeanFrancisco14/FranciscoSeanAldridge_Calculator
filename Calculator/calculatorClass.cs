@@ -17,6 +17,5 @@ namespace Calculator
         public string Calcu_Operation { get => calcu_Operation; set => calcu_Operation = value; }
         public bool IsOperationPerformed { get => isOperationPerformed; set => isOperationPerformed = value; }
         public bool IsInfinityException { get => isInfinityException; set => isInfinityException = value; }
-        public Form1 Form1 { get => form1; set => form1 = value; }
     }
 }
