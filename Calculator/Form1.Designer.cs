@@ -48,7 +48,7 @@ namespace Calculator
             this.btnMinus = new System.Windows.Forms.Button();
             this.btnEquals = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.textBox_Answer = new System.Windows.Forms.TextBox();
+            this.textBox_Result = new System.Windows.Forms.TextBox();
             this.currentOperation_Label = new System.Windows.Forms.Label();
             this.btnSign = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -242,15 +242,15 @@ namespace Calculator
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.operator_Click);
             // 
-            // textBox_Answer
+            // textBox_Result
             // 
-            this.textBox_Answer.Location = new System.Drawing.Point(12, 36);
-            this.textBox_Answer.Name = "textBox_Answer";
-            this.textBox_Answer.Size = new System.Drawing.Size(299, 20);
-            this.textBox_Answer.TabIndex = 18;
-            this.textBox_Answer.Text = "0";
-            this.textBox_Answer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox_Answer.TextChanged += new System.EventHandler(this.textBox_Answer_TextChanged);
+            this.textBox_Result.Location = new System.Drawing.Point(12, 36);
+            this.textBox_Result.Name = "textBox_Result";
+            this.textBox_Result.Size = new System.Drawing.Size(299, 20);
+            this.textBox_Result.TabIndex = 18;
+            this.textBox_Result.Text = "0";
+            this.textBox_Result.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox_Result.TextChanged += new System.EventHandler(this.textBox_Answer_TextChanged);
             // 
             // currentOperation_Label
             // 
@@ -282,7 +282,7 @@ namespace Calculator
             this.ClientSize = new System.Drawing.Size(318, 298);
             this.Controls.Add(this.btnSign);
             this.Controls.Add(this.currentOperation_Label);
-            this.Controls.Add(this.textBox_Answer);
+            this.Controls.Add(this.textBox_Result);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEquals);
             this.Controls.Add(this.btnMinus);
@@ -333,7 +333,7 @@ namespace Calculator
         private System.Windows.Forms.Button btnEquals;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSign;
-        public System.Windows.Forms.TextBox textBox_Answer;
+        public System.Windows.Forms.TextBox textBox_Result;
         public System.Windows.Forms.Label currentOperation_Label;
     }
 }

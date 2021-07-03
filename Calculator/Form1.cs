@@ -32,38 +32,38 @@ namespace Calculator
             switch (calc.Calcu_Operation)
             {
                 case "+":
-                    textBox_Answer.Text = (calc.Result_Value + Double.Parse(textBox_Answer.Text)).ToString();
+                    textBox_Result.Text = (calc.Result_Value + Double.Parse(textBox_Result.Text)).ToString();
                     break;
                 case "-":
-                    textBox_Answer.Text = (calc.Result_Value - Double.Parse(textBox_Answer.Text)).ToString();
+                    textBox_Result.Text = (calc.Result_Value - Double.Parse(textBox_Result.Text)).ToString();
                     break;
                 case "*":
-                    textBox_Answer.Text = (calc.Result_Value * Double.Parse(textBox_Answer.Text)).ToString();
+                    textBox_Result.Text = (calc.Result_Value * Double.Parse(textBox_Result.Text)).ToString();
                     break;
                 case "/":
-                    textBox_Answer.Text = (calc.Result_Value / Double.Parse(textBox_Answer.Text)).ToString();
+                    textBox_Result.Text = (calc.Result_Value / Double.Parse(textBox_Result.Text)).ToString();
                     break;
                 default:
                     break;
             }
-            calc.Result_Value = Double.Parse(textBox_Answer.Text);
+            calc.Result_Value = Double.Parse(textBox_Result.Text);
             currentOperation_Label.Text = "";
         }
 
         private void button_Click(object sender, EventArgs e)
         {
-            if ((textBox_Answer.Text == "0") || calc.IsOperationPerformed)
-                textBox_Answer.Clear();
+            if ((textBox_Result.Text == "0") || calc.IsOperationPerformed)
+            { textBox_Result.Clear(); }
 
             calc.IsOperationPerformed = false;
             Button button = (Button)sender;
             if (button.Text == ".")
             {
-                if (!textBox_Answer.Text.Contains("."))
-                    textBox_Answer.Text = textBox_Answer.Text + button.Text;
+                if (!textBox_Result.Text.Contains("."))
+                    textBox_Result.Text = textBox_Result.Text + button.Text;
             }
             else
-            textBox_Answer.Text = textBox_Answer.Text + button.Text;
+            textBox_Result.Text = textBox_Result.Text + button.Text;
         }
 
         private void operator_Click(object sender, EventArgs e)
@@ -74,14 +74,14 @@ namespace Calculator
             {
                 btnEquals.PerformClick();
                 calc.Calcu_Operation = button.Text;
-                calc.Result_Value = Double.Parse(textBox_Answer.Text);
+                calc.Result_Value = Double.Parse(textBox_Result.Text);
                 currentOperation_Label.Text = calc.Result_Value + "" + calc.Calcu_Operation;
                 calc.IsOperationPerformed = true;
             }
             else
             {
                 calc.Calcu_Operation = button.Text;
-                calc.Calcu_Operation = Double.Parse(textBox_Answer.Text).ToString();
+                calc.Calcu_Operation = Double.Parse(textBox_Result.Text).ToString();
                 currentOperation_Label.Text = calc.Result_Value + "" + calc.Calcu_Operation;
                 calc.IsOperationPerformed = true;
             }
@@ -91,21 +91,21 @@ namespace Calculator
         {
             if (!calc.IsInfinityException)
             {
-                textBox_Answer.Text = (double.Parse(textBox_Answer.Text) * -1).ToString();
+                textBox_Result.Text = (double.Parse(textBox_Result.Text) * -1).ToString();
             }
         }
         private void CEbtn_Click(object sender, EventArgs e)
         {
-            textBox_Answer.Text = "0";
+            textBox_Result.Text = "0";
             currentOperation_Label.Text = "";
             calc.Result_Value = 0;
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            textBox_Answer.Text = "0";
+            textBox_Result.Text = "";
             currentOperation_Label.Text = "";
             calc.Result_Value = 0;
-        }  
+        }
     }
 }
