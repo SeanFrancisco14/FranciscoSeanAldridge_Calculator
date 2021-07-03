@@ -46,6 +46,7 @@ namespace Calculator
                 default:
                     break;
             }
+            calc.IsOperationPerformed = true;
             calc.Result_Value = Double.Parse(textBox_Result.Text);
             currentOperation_Label.Text = "";
         }
