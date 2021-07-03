@@ -90,20 +90,19 @@ namespace Calculator
         private void btnSign_Click(object sender, EventArgs e)
         {
             if (!calc.IsInfinityException)
-            {
-                textBox_Result.Text = (double.Parse(textBox_Result.Text) * -1).ToString();
-            }
+            { textBox_Result.Text = (double.Parse(textBox_Result.Text) * -1).ToString(); }
         }
+
         private void CEbtn_Click(object sender, EventArgs e)
         {
-            textBox_Result.Text = "0";
+            textBox_Result.ResetText();
             currentOperation_Label.Text = "";
             calc.Result_Value = 0;
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            textBox_Result.Text = "";
+            textBox_Result.ResetText();
             currentOperation_Label.Text = "";
             calc.Result_Value = 0;
         }
