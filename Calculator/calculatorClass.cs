@@ -12,18 +12,13 @@ namespace Calculator
         private string calcu_Operation = "";
         private bool isOperationPerformed = false;
         private bool isInfinityException = false;
-
         public double Result_Value { get => result_Value; set => result_Value = value; }
         public string Calcu_Operation { get => calcu_Operation; set => calcu_Operation = value; }
         public bool IsOperationPerformed { get => isOperationPerformed; set => isOperationPerformed = value; }
         public bool IsInfinityException { get => isInfinityException; set => isInfinityException = value; }
-        public double A { get; set; }
-        public double B { get; set; }
-
-        public static double Addition(Double A, Double B) { return A + B; }
-        public static double Subtract(Double A, Double B) { return A - B; }
-        public static double Multiply(Double A, Double B) { return A * B; }
-        public static double Divide(Double A, Double B) { return A / B; }
-
+        public double Addition(double num1, double num2) { return num1 + num2; }
+        public double Subtract(double num1, double num2) { return num1 - num2; }
+        public double Multiply(double num1, double num2) { return num1 * num2; }
+        public double Divide(double num1, double num2) { return num1 / num2; }
     }
 }

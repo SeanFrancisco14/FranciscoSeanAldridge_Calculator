@@ -6,7 +6,6 @@ namespace Calculator
     public partial class Form1 : Form
     {
         calculatorClass calc = new calculatorClass();
-
         public Form1()
         {
             InitializeComponent();
@@ -32,20 +31,24 @@ namespace Calculator
             switch (calc.Calcu_Operation)
             {
                 case "+":
-                    textBox_Result.Text = (calc.Result_Value + Double.Parse(textBox_Result.Text)).ToString();
+                    double sum = calc.Addition(calc.Result_Value, double.Parse(textBox_Result.Text));
+                    textBox_Result.Text = sum.ToString();
                     break;
                 case "-":
-                    textBox_Result.Text = (calc.Result_Value - Double.Parse(textBox_Result.Text)).ToString();
+                    double difference = calc.Subtract(calc.Result_Value, double.Parse(textBox_Result.Text));
+                    textBox_Result.Text = difference.ToString();
                     break;
                 case "*":
-                    textBox_Result.Text = (calc.Result_Value * Double.Parse(textBox_Result.Text)).ToString();
+                    double product = calc.Multiply(calc.Result_Value, double.Parse(textBox_Result.Text));
+                    textBox_Result.Text = product.ToString();
                     break;
                 case "/":
-                    textBox_Result.Text = (calc.Result_Value / Double.Parse(textBox_Result.Text)).ToString();
+                    double quotient = calc.Divide(calc.Result_Value, double.Parse(textBox_Result.Text));
+                    textBox_Result.Text = quotient.ToString();
                     break;
                 default:
                     break;
-            }
+            } 
             calc.IsOperationPerformed = true;
             calc.Result_Value = Double.Parse(textBox_Result.Text);
             currentOperation_Label.Text = "";
